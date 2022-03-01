@@ -13,6 +13,7 @@ import {
 import Expenses from "./routes/Expenses";
 import Invoices from "./routes/Invoices";
 import Invoice from "./routes/Invoice";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <BrowserRouter>

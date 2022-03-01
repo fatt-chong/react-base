@@ -16,7 +16,7 @@ import {
     }
 
     return (
-      <div style={{ display: "flex" }}>
+      <div className="container" style={{ display: "flex" }}>
         <nav
           style={{
             borderRight: "solid 1px",
