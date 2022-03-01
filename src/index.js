@@ -9,7 +9,8 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-
+//componentes
+import UsersLists from './components/UsersComponents/UsersLists';
 import Expenses from "./routes/Expenses";
 import Invoices from "./routes/Invoices";
 import Invoice from "./routes/Invoice";
@@ -31,6 +32,7 @@ ReactDOM.render(
           />
           <Route path=":invoiceId" element={<Invoice />} />
         </Route>
+        <Route path="usuarios/listar" element={<UsersLists />} />
         <Route
           path="*"
           element={
@@ -41,6 +43,7 @@ ReactDOM.render(
         />
       </Route>
     </Routes>
+    
   </BrowserRouter>,
   
   document.getElementById('root')

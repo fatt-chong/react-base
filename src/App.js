@@ -22,6 +22,7 @@ function App() {
       >
         <Nav.Link><Link to="/facturas" style={etiquetaA}>Invoices</Link></Nav.Link>
         <Nav.Link ><Link to="/expenses" style={etiquetaA}>Expenses</Link></Nav.Link>
+        <Nav.Link ><Link to="/usuarios/listar" style={etiquetaA}>usuarios</Link></Nav.Link>
         <NavDropdown title="Link" id="navbarScrollingDropdown">
           <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
           <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
