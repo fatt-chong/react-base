@@ -20,7 +20,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="expenses" element={<Expenses />} />
-        <Route path="invoices" element={<Invoices />}>
+        <Route path="facturas" element={<Invoices />}>
           <Route
             index
             element={

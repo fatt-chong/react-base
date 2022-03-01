@@ -48,7 +48,7 @@ import {
                   margin: "1rem 0",
                   color: isActive ? "red" : "",
                 })}
-                to={`/invoices/${invoice.number}`}
+                to={`/facturas/${invoice.number}`}
                 key={invoice.number}
               >
                 {invoice.name}
