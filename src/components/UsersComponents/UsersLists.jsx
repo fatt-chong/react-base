@@ -26,9 +26,9 @@ const UsersLists = () =>{
     const getUsers = async () => {
 
         let usuarios = await axios.get("http://localhost:3001/usuarios");
-        setUser(usuarios.data);
-        setTamUser(usuarios.length);
-        console.log(tamUser);
+        setUser(usuarios.data.rows);
+        setTamUser(usuarios.data.length);
+        console.log(usuarios.data.rows);
         //console.log(usuarios.data);
         
     }
@@ -47,9 +47,9 @@ const UsersLists = () =>{
             <thead>
                 <tr>
                 <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>email</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
                 </tr>
             </thead>
             <tbody>
