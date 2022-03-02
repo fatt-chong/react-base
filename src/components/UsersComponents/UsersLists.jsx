@@ -23,7 +23,7 @@ const UsersLists = () =>{
 
         let usuarios = await axios.get("http://localhost:3001/usuarios");
         setUser(usuarios.data);
-        console.log(usuarios.data);
+        //console.log(usuarios.data);
         
     }
 
