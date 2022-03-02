@@ -7,13 +7,17 @@ import {
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
 import {Table} from 'react-bootstrap';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const UsersLists = () =>{
 
     const [user, setUser] = useState([]);
-    
+    const [tamUser, setTamUser] = useState(0);
+
     useEffect(()=>{
         console.log("solo carga");
+        
         getUsers();
     }, []);
 
@@ -23,6 +27,8 @@ const UsersLists = () =>{
 
         let usuarios = await axios.get("http://localhost:3001/usuarios");
         setUser(usuarios.data);
+        setTamUser(usuarios.length);
+        console.log(tamUser);
         //console.log(usuarios.data);
         
     }
@@ -30,8 +36,14 @@ const UsersLists = () =>{
     return(
         <>
         <div className="container">
+            
             <h1>En listar usuarios</h1>
-            <Table striped bordered hover variant="dark">
+            
+            {
+                tamUser === 0 ?
+                    <Skeleton count={20} />
+                :
+                <Table striped bordered hover variant="dark">
             <thead>
                 <tr>
                 <th>#</th>
@@ -52,7 +64,10 @@ const UsersLists = () =>{
 
             </tbody>
             </Table>
-        </div>
+        
+            }
+        </div>    
+            
         </>
     );
 }
